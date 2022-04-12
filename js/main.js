@@ -3,15 +3,13 @@ document.querySelector('button').addEventListener('click', checkIfHaiku)
 
 function checkIfHaiku() {
 
+
+    //Create array from user input
     let haikuArr = [];
 
     haikuArr.push(document.querySelector('.line1'))
     haikuArr.push(document.querySelector('.line2'))
     haikuArr.push(document.querySelector('.line3'))
-
-    // let line1 = document.querySelector('.line1').value
-    // let line2 = document.querySelector('.line2').value
-    // let line3 = document.querySelector('.line3').value
 
 
     let url = new URL('/words','https://api.datamuse.com')
