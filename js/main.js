@@ -3,7 +3,6 @@ document.querySelector('button').addEventListener('click', checkIfHaiku)
 
 function checkIfHaiku() {
 
-
     //Create array from user input
     let haikuArr = [];
 
@@ -11,13 +10,13 @@ function checkIfHaiku() {
     haikuArr.push(document.querySelector('.line2'))
     haikuArr.push(document.querySelector('.line3'))
 
-
+    //Creates URL with the parameters to search up the syllable metadata
     let url = new URL('/words','https://api.datamuse.com')
+    url.searchParams.set('qe', 'sp')
+    url.searchParams.set('md', 's')
     
     haikuArr.forEach((element, index) => {
         url.searchParams.set('sp', element.value)
-        url.searchParams.set('qe', 'sp')
-        url.searchParams.set('md', 's')
         console.log(url.toString())
 
         //update it to map to the line number, it doesn't do that right now
