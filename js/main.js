@@ -25,12 +25,31 @@ function checkIfHaiku() {
         fetch(url.toString())
             .then (res => res.json())
             .then (data => {
-                document.querySelector(`#line${index+1}Syllables`).innerText = data[0].numSyllables
+                if (data.length === 0){
+                    document.querySelector(`#line${index+1}Syllables`).innerText = "0 syllables"
+                } 
+                else if(index === 0){
+                document.querySelector('#line1Syllables').innerText = `${data[0].numSyllables} syllables`
+                
+                }
+                else if(index === 1){
+                    document.querySelector('#line2Syllables').innerText = `${data[0].numSyllables} syllables`
+                }
+                else if(index === 2){
+                        document.querySelector('#line3Syllables').innerText = `${data[0].numSyllables} syllables`
+                }
             })
 
+         })
+    }
+    // else{
+    //     document.querySelector(`#line${index+1}Syllables`).innerText = `${data[0].numSyllables} syllables`
+        
+    //     }
 
-    })
-    
+    // if (document.querySelector('#line1Syllables') === '5 syllables'){
+    //         document.querySelector('#line1Syllables').style = 'color: green;';
+    //     }
     // put user form input into values
     // maybe create an array with the strings from the input and then map them into syllables?
     //loop over array [line1, line2, line3]
@@ -46,5 +65,3 @@ function checkIfHaiku() {
 //     })
 
 // })
-
-}
