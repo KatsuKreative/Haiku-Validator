@@ -30,18 +30,37 @@ function checkIfHaiku() {
                 } 
                 else if(index === 0){
                 document.querySelector('#line1Syllables').innerText = `${data[0].numSyllables} syllables`
+                    if(data[0].numSyllables === 5){
+                    document.querySelector('#line1Syllables').style = 'background: green;'
+                    }
+                    else {
+                        document.querySelector('#line1Syllables').style = 'background: red;'
+                    }
                 
                 }
                 else if(index === 1){
                     document.querySelector('#line2Syllables').innerText = `${data[0].numSyllables} syllables`
+                    if(data[0].numSyllables === 7){
+                        document.querySelector('#line2Syllables').style = 'background: green;'
+                    }
+                    else {
+                            document.querySelector('#line2Syllables').style = 'background: red;'
+                    }
                 }
                 else if(index === 2){
                         document.querySelector('#line3Syllables').innerText = `${data[0].numSyllables} syllables`
-                }
+                        if(data[0].numSyllables === 5){
+                            document.querySelector('#line3Syllables').style = 'background: green;'
+                        }
+                        else {
+                                document.querySelector('#line3Syllables').style = 'background: red;'
+                        }
+                    }
+                })
             })
 
-         })
-    }
+         }
+    
     // else{
     //     document.querySelector(`#line${index+1}Syllables`).innerText = `${data[0].numSyllables} syllables`
         
