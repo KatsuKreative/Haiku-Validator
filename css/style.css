@@ -44,6 +44,7 @@ form {
 input {
      margin: 20px 0;
      width: 50%;
+     height: 100%;
 }
 header {
 
@@ -58,6 +59,10 @@ footer {
 /*******************************************/
 
 #line1Syllables, #line2Syllables, #line3Syllables {
-     margin-top: 20px;
-     margin-left: 10px;
+    
+     margin: 10px;
+     margin-top: 15px;
+     padding: 10px;
+     height: 100%;
+     
 }
