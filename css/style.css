@@ -43,6 +43,7 @@ form {
 }
 input {
      margin: 20px 0;
+     margin-left: 30px;
      width: 50%;
      height: 100%;
 }
